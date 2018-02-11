@@ -7,6 +7,7 @@ app = Flask(__name__)
 app.config.from_object(__name__)
 app.debug = True
 
+print("got here")
 # Load default config and override config from an environment variable
 #app.config.update(dict(
 #    DATABASE=os.path.join(app.root_path, 'flaskr.db'),
