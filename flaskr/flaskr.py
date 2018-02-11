@@ -5,6 +5,7 @@ import mapcalc as mapcalc
 
 app = Flask(__name__)
 app.config.from_object(__name__)
+app.debug = True
 
 # Load default config and override config from an environment variable
 #app.config.update(dict(
