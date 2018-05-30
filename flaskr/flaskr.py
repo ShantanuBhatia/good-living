@@ -1,7 +1,8 @@
 import os
 # import sqlite3
 from flask import Flask, request, session, g, redirect, url_for, abort, render_template, flash
-import flaskr.mapcalc as mapcalc
+# from flaskr import mapcalc as mapcalc
+import mapcalc
 
 app = Flask(__name__)
 app.config.from_object(__name__)
