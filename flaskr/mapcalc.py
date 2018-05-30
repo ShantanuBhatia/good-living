@@ -46,12 +46,6 @@ def result_list(req, loc):
     return gsearch['results']
 
 
-# all this following code belongs elsewhere; this script is just for defining the helper functions
-# big_list_of_results = []
-#
-# for param in dummy_user_inputs:
-#     big_list_of_results.append(result_list(param, union_sq))
-
 
 def res_locations(loc_lists, params):
     # Function that takes all the user input and spits out an array of ideal lat-long locations that fit the params
@@ -91,7 +85,6 @@ def res_locations(loc_lists, params):
     # Approximating the fact that the ideal location is pulled in the direction of places the user wants to be closer to
 
     for i in range(len(all_combos)):
-    # for i in range(100):
         weights = []
         for n in range(len(all_combos[i])):
             dist = params[n]['dist']
@@ -117,12 +110,10 @@ def res_locations(loc_lists, params):
                 add_item = False
             if params[j]['req_type'] == 'further_than' and candidate_dist < params[j]['dist']:
                 add_item = False
-            # print("Targeting", params[j]['req_type'], params[j]['dist'])
-            # print("Got a distance of", candidate_dist)
+
         if add_item:
             final_latlongs.append(candidate_loc)
-    # print(len(final_latlongs))
-    # print(final_latlongs[0])
+
     return final_latlongs
 
 # this next line should really be in the other script tbh
