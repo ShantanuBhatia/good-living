@@ -15,7 +15,7 @@ def verify_import():
 # until the frontend page works, use this list of dicts to add search terms
 dummy_user_inputs = [
     {'req_type': 'closer_than', 'dist': 0.25, 'search_term': 'laundry'},
-    {'req_type': 'closer_than', 'dist': 0.25, 'search_term': 'gym'},
+    # {'req_type': 'further_than', 'dist': 0.25, 'search_term': 'gym'},
     {'req_type': 'further_than', 'dist': 0.5, 'search_term': 'nightclub'}
 ]
 
