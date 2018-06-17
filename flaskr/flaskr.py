@@ -50,8 +50,8 @@ def result():
             user_inputs.append(search_item)
 
         list_of_results = []
-        if len(list_of_results) == 0:
-            return render_template("not_found.html")
+        #if len(list_of_results) == 0:
+        #    return render_template("not_found.html")
         for param in user_inputs:
             list_of_results.append(mapcalc.result_list(param, target_coords))
         final_coords = mapcalc.res_locations(list_of_results, user_inputs)
